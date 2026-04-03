@@ -29,18 +29,27 @@ export const topicSets: Topic[][] = [
     { text: "VAR should have given a penalty", messages: 312, heat: "orange" },
     { text: "Bring on Dembélé for the second half", messages: 198, heat: "yellow" },
     { text: "Bellingham having a quiet game", messages: 87, heat: "gray" },
+    { text: "Donnarumma commanding the box tonight", messages: 64, heat: "gray" },
+    { text: "Hakimi overlapping every attack", messages: 43, heat: "gray" },
+    { text: "Crowd chanting Mbappé's name", messages: 29, heat: "gray" },
   ],
   [
     { text: "GOAL! Mbappé scores despite the injury!", messages: 891, heat: "red" },
     { text: "What a cross from Hakimi", messages: 445, heat: "orange" },
     { text: "PSG deserved that lead", messages: 267, heat: "yellow" },
     { text: "Real Madrid need to wake up", messages: 134, heat: "gray" },
+    { text: "Ancelotti looks furious on the touchline", messages: 98, heat: "gray" },
+    { text: "That celebration was iconic", messages: 72, heat: "gray" },
+    { text: "Commentators going absolutely wild", messages: 41, heat: "gray" },
   ],
   [
     { text: "Vinícius Jr with a stunning dribble", messages: 567, heat: "red" },
     { text: "This match deserves extra time", messages: 389, heat: "orange" },
     { text: "Both keepers having incredible games", messages: 234, heat: "yellow" },
     { text: "The atmosphere must be electric", messages: 156, heat: "gray" },
+    { text: "Midfield battle is intense tonight", messages: 112, heat: "gray" },
+    { text: "Sub incoming for Real Madrid", messages: 78, heat: "gray" },
+    { text: "Fans on their feet non-stop", messages: 35, heat: "gray" },
   ],
 ];
 

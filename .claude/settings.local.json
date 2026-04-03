@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(cp -r /Users/sajithmr/1box/buff-commendatore/buff-temp/* /Users/sajithmr/1box/buff-commendatore/)",
+      "Bash(cp /Users/sajithmr/1box/buff-commendatore/buff-temp/.gitignore /Users/sajithmr/1box/buff-commendatore/)",
+      "Bash(rm -rf /Users/sajithmr/1box/buff-commendatore/buff-temp)",
+      "Bash(npm install:*)",
+      "Bash(curl -s http://localhost:5173/)"
+    ]
+  }
+}

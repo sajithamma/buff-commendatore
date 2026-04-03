@@ -235,7 +235,6 @@ html, body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 12px;
 }
 
 .topic {
@@ -246,8 +245,13 @@ html, body {
 
 .topic-1 {
   flex-direction: column;
-  margin-bottom: 4px;
-  flex: 1;
+}
+
+.topics-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
 }
 
 .topic-1-text {
@@ -297,6 +301,12 @@ html, body {
   font-size: 14px;
   font-weight: 400;
   color: var(--text-secondary);
+}
+
+.topic-5-text {
+  font-size: 13px;
+  font-weight: 400;
+  color: #48484a;
 }
 
 .topic-count {
