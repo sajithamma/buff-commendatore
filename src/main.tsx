@@ -16,8 +16,14 @@ function App() {
   const [activeTab, setActiveTab] = useState("live");
 
   return (
-    <div class="app">
-      <AuroraBackground />
+    <>
+      <div class="mobile-block">
+        <div class="mobile-block-icon">🖥️</div>
+        <div class="mobile-block-title">Use iPad or Desktop</div>
+        <div class="mobile-block-sub">This commentator dashboard is designed for landscape screens. Please open on an iPad or desktop browser.</div>
+      </div>
+      <div class="app">
+        <AuroraBackground />
       <TopBar />
       <div class="main-content">
         {activeTab === "live" && (
@@ -38,6 +44,7 @@ function App() {
       </div>
       <BottomBar activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
+    </>
   );
 }
 
