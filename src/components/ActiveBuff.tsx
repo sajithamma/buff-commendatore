@@ -2,10 +2,36 @@ import { useActiveBuff } from "../hooks/useSimulation";
 
 const optionLetters = ["A", "B", "C", "D"];
 
+function BuffStandby() {
+  return (
+    <div class="card dark-card buff-standby">
+      <div class="standby-scanlines" />
+      <div class="standby-grid" />
+      <div class="standby-content">
+        <div class="standby-ring">
+          <svg class="standby-ring-svg" viewBox="0 0 100 100">
+            <circle class="ring-track" cx="50" cy="50" r="42" />
+            <circle class="ring-sweep" cx="50" cy="50" r="42" />
+          </svg>
+          <div class="standby-icon">⚡</div>
+        </div>
+        <div class="standby-label">BUFF STANDBY</div>
+        <div class="standby-sub">
+          <span class="standby-cursor">_</span> Awaiting next deployment
+        </div>
+        <div class="standby-stats">
+          <span class="standby-stat">SYS <span class="standby-val">ONLINE</span></span>
+          <span class="standby-stat">LINK <span class="standby-val">ACTIVE</span></span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function ActiveBuff() {
   const buff = useActiveBuff();
 
-  if (buff.state !== "live") return null;
+  if (buff.state !== "live") return <BuffStandby />;
 
   const isUrgent = (buff.timeLeft ?? 99) <= 10;
 
