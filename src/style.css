@@ -185,8 +185,9 @@ html, body {
 }
 
 .white-card {
-  background: var(--white-card);
-  color: var(--text-dark);
+  background: #242426;
+  color: var(--text-white);
+  border: 1px solid #3a3a3c;
 }
 
 .card-label {
@@ -197,7 +198,7 @@ html, body {
 }
 
 .card-label.dark {
-  color: var(--text-dark);
+  color: var(--text-white);
 }
 
 .card-sublabel {
@@ -353,7 +354,7 @@ html, body {
 
 .pinned-card {
   flex: 1;
-  background: #f9f5ff;
+  background: #2c2c2e;
   border-radius: 14px;
   padding: 16px;
   border-left: 3px solid var(--purple);
@@ -367,7 +368,7 @@ html, body {
 .pinned-text {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--text-white);
   line-height: 1.35;
   overflow: hidden;
   display: -webkit-box;
@@ -390,7 +391,7 @@ html, body {
 
 .pinned-time {
   font-size: 11px;
-  color: var(--text-dark-secondary);
+  color: var(--text-secondary);
 }
 
 /* ===== ACTIVE BUFF ===== */
@@ -416,7 +417,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
   border: 2px solid transparent;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, var(--green), var(--blue), var(--green));
+  background-image: linear-gradient(#242426, #242426), linear-gradient(90deg, var(--green), var(--blue), var(--green));
   background-origin: border-box;
   background-clip: padding-box, border-box;
   background-size: 100% 100%, 200% 100%;
@@ -424,7 +425,7 @@ html, body {
 }
 
 .active-buff.buff-urgent {
-  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, var(--red), var(--orange), var(--red));
+  background-image: linear-gradient(#242426, #242426), linear-gradient(90deg, var(--red), var(--orange), var(--red));
   background-size: 100% 100%, 200% 100%;
   animation: shimmerBorder 1.5s linear infinite, urgentPulse 1s ease-in-out infinite;
 }
@@ -464,7 +465,7 @@ html, body {
 .buff-question {
   font-size: 18px;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-white);
   line-height: 1.3;
 }
 
@@ -478,7 +479,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #f2f2f7;
+  background: #2c2c2e;
   border-radius: 10px;
   padding: 10px 14px;
   transition: background 0.2s;
@@ -501,7 +502,7 @@ html, body {
 .option-name {
   font-size: 16px;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-white);
 }
 
 .buff-footer {
@@ -511,7 +512,7 @@ html, body {
 }
 
 .buff-timer-pill {
-  background: #e8faf0;
+  background: rgba(52, 199, 89, 0.15);
   border-radius: 20px;
   padding: 4px 12px;
 }
@@ -523,7 +524,7 @@ html, body {
 }
 
 .buff-timer-pill.timer-urgent {
-  background: #fff0ee;
+  background: rgba(255, 59, 48, 0.15);
 }
 
 .buff-timer-pill.timer-urgent .timer-value {
@@ -532,7 +533,7 @@ html, body {
 
 .buff-cta {
   font-size: 12px;
-  color: var(--text-dark-secondary);
+  color: var(--text-tertiary);
   font-style: italic;
 }
 
@@ -772,7 +773,7 @@ html, body {
 .stats-sublabel {
   font-size: 10px;
   font-weight: 700;
-  color: var(--text-dark-secondary);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
@@ -794,14 +795,14 @@ html, body {
 .stat-value {
   font-size: 18px;
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--text-white);
   font-family: var(--mono);
 }
 
 .stat-label-text {
   font-size: 10px;
   font-weight: 600;
-  color: var(--text-dark-secondary);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -809,7 +810,7 @@ html, body {
 .stat-divider {
   width: 1px;
   height: 28px;
-  background: #e0e0e0;
+  background: #3a3a3c;
   flex-shrink: 0;
 }
 
