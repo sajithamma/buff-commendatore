@@ -1156,3 +1156,364 @@ body::after {
   font-weight: 700;
   color: var(--green);
 }
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-tertiary);
+  transition: all 0.3s ease;
+  margin-left: 8px;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+}
+
+/* ===================================================
+   LIGHT THEME
+   =================================================== */
+[data-theme="light"] {
+  --bg: #f5f2ee;
+  --text-white: #111111;
+  --text-secondary: #555558;
+  --text-tertiary: #737378;
+  --text-dark: #111111;
+  --text-dark-secondary: #6b6b70;
+  --text-dark-body: #333338;
+  --orange: #c46800;
+  --purple: #8b3ab5;
+  --green: #1d8c3e;
+  --red: #d42f25;
+  --blue: #0060d0;
+  --yellow: #b89600;
+}
+
+[data-theme="light"] body {
+  background: #f5f2ee;
+  color: #1a1a1a;
+}
+
+/* Glare — warm & subtle on light */
+[data-theme="light"] body::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.01) 30%,
+    rgba(0, 0, 0, 0.025) 50%,
+    rgba(0, 0, 0, 0.01) 70%,
+    transparent 100%
+  );
+}
+
+/* Top bar */
+[data-theme="light"] .top-bar {
+  background: rgba(255, 252, 248, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .top-bar-label {
+  color: #555558;
+}
+
+[data-theme="light"] .match-info {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .match-time {
+  color: #555558;
+}
+
+[data-theme="light"] .jil-logo {
+  filter: brightness(0.3);
+  opacity: 0.6;
+}
+
+[data-theme="light"] .theme-toggle {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #7a7a7d;
+}
+
+[data-theme="light"] .theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+/* Cards — frosted glass on warm cream */
+[data-theme="light"] .dark-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 2px 20px rgba(0, 0, 0, 0.06),
+    0 0 0 0.5px rgba(255, 255, 255, 0.8) inset,
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .white-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.07),
+    0 0 0 0.5px rgba(255, 255, 255, 0.9) inset,
+    0 1px 0 rgba(255, 255, 255, 1) inset;
+  color: #1a1a1a;
+}
+
+/* Hot Topics */
+[data-theme="light"] .card-label {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .card-label.dark {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .hot-topics-meta {
+  color: #555558;
+}
+
+[data-theme="light"] .topic-1-text {
+  background: linear-gradient(
+    90deg,
+    #1a1a1a 0%,
+    #1a1a1a 40%,
+    #7c3aed 50%,
+    #1a1a1a 60%,
+    #1a1a1a 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .topic-2-text {
+  color: #222225;
+}
+
+[data-theme="light"] .topic-3-text {
+  color: #444448;
+}
+
+[data-theme="light"] .topic-4-text {
+  color: #666669;
+}
+
+[data-theme="light"] .topic-5-text {
+  color: #88888c;
+}
+
+[data-theme="light"] .topic-count.gray {
+  color: #666669;
+}
+
+[data-theme="light"] .heat-bar {
+  background: var(--red);
+}
+
+/* Pinned Chats */
+[data-theme="light"] .pinned-card {
+  background: rgba(245, 240, 255, 0.6);
+}
+
+[data-theme="light"] .pinned-text {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .pinned-time {
+  color: #666669;
+}
+
+/* Active Buff */
+[data-theme="light"] .active-buff {
+  background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), linear-gradient(90deg, var(--green), var(--blue), var(--green));
+}
+
+[data-theme="light"] .active-buff.buff-urgent {
+  background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), linear-gradient(90deg, var(--red), var(--orange), var(--red));
+}
+
+[data-theme="light"] .buff-question {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .buff-option-row {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .option-name {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .buff-timer-pill {
+  background: rgba(52, 199, 89, 0.1);
+}
+
+[data-theme="light"] .buff-timer-pill.timer-urgent {
+  background: rgba(255, 59, 48, 0.1);
+}
+
+[data-theme="light"] .buff-cta {
+  color: #666669;
+}
+
+/* Last Result */
+[data-theme="light"] .result-winner {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .result-bar-fill {
+  background: #1a1a1a;
+}
+
+[data-theme="light"] .result-bar-track {
+  background: #e5e5e7;
+}
+
+[data-theme="light"] .runner-up-name,
+[data-theme="light"] .runner-up-pct {
+  color: #444448;
+}
+
+[data-theme="light"] .runner-up-bar .runner-up-fill {
+  background: #737378;
+}
+
+[data-theme="light"] .result-meta {
+  color: #666669;
+}
+
+/* Live Stats */
+[data-theme="light"] .stat-value {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .stat-label-text {
+  color: #666669;
+}
+
+[data-theme="light"] .stat-divider {
+  background: #e0ddd8;
+}
+
+[data-theme="light"] .stats-sublabel {
+  color: #666669;
+}
+
+/* Buff Standby */
+[data-theme="light"] .buff-standby {
+  background: rgba(240, 238, 235, 0.8);
+  border: 1px solid rgba(52, 199, 89, 0.15);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.05),
+    0 0 0 0.5px rgba(52, 199, 89, 0.08) inset;
+}
+
+[data-theme="light"] .standby-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(52, 199, 89, 0.02) 3px,
+    rgba(52, 199, 89, 0.02) 4px
+  );
+}
+
+[data-theme="light"] .standby-grid {
+  background:
+    linear-gradient(rgba(52, 199, 89, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(52, 199, 89, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Bottom bar */
+[data-theme="light"] .bottom-bar {
+  background: rgba(255, 252, 248, 0.85);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .tab-btn {
+  color: #666669;
+}
+
+[data-theme="light"] .tab-btn.active {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .gray-dot {
+  background: #888;
+}
+
+[data-theme="light"] .ticker-content {
+  color: #666669;
+}
+
+/* All Chats View */
+[data-theme="light"] .all-chats-view {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="light"] .chat-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .chat-text {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .chat-time {
+  color: #666669;
+}
+
+/* Vote Progress View */
+[data-theme="light"] .vote-progress-view {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="light"] .vote-question {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .vote-bar-label {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .vote-bar-track {
+  background: #e5e5e7;
+}
+
+[data-theme="light"] .vote-bar-count {
+  color: #555558;
+}
+
+[data-theme="light"] .vote-total {
+  color: #555558;
+}
+
+/* Mobile block */
+[data-theme="light"] .mobile-block {
+  background: #f5f2ee;
+}
+
+[data-theme="light"] .mobile-block-title {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .mobile-block-sub {
+  color: #555558;
+}
+
+/* Light mode viewer count — darker orange */
+[data-theme="light"] .viewer-count {
+  color: #c46800;
+}
