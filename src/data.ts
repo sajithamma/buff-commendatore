@@ -54,11 +54,11 @@ export const topicSets: Topic[][] = [
 ];
 
 export const buffSequence: Buff[] = [
-  { state: "live", question: "Who will score next?", options: ["Mbappé", "Haaland", "Vinícius"], timeLeft: 45 },
+  { state: "live", question: "Who will score next?", options: ["Mbappé", "Haaland", "Vinícius"], timeLeft: 12 },
   { state: "result", question: "Who will score next?", winner: "Mbappé", winnerPct: 67, loser: "Bellingham", loserPct: 33, totalVotes: 6318 },
-  { state: "live", question: "Will there be a red card?", options: ["Yes", "No"], timeLeft: 60 },
+  { state: "live", question: "Will there be a red card?", options: ["Yes", "No"], timeLeft: 12 },
   { state: "result", question: "Will there be a red card?", winner: "No", winnerPct: 73, loser: "Yes", loserPct: 27, totalVotes: 6102 },
-  { state: "live", question: "Man of the match so far?", options: ["Mbappé", "Bellingham", "Donnarumma"], timeLeft: 90 },
+  { state: "live", question: "Man of the match so far?", options: ["Mbappé", "Bellingham", "Donnarumma"], timeLeft: 12 },
 ];
 
 export const pinnedChats: PinnedChat[] = [
