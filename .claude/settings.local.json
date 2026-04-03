@@ -6,7 +6,8 @@
       "Bash(cp /Users/sajithmr/1box/buff-commendatore/buff-temp/.gitignore /Users/sajithmr/1box/buff-commendatore/)",
       "Bash(rm -rf /Users/sajithmr/1box/buff-commendatore/buff-temp)",
       "Bash(npm install:*)",
-      "Bash(curl -s http://localhost:5173/)"
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(npm run:*)"
     ]
   }
 }

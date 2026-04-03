@@ -47,7 +47,6 @@ export function useViewerCount() {
 export function useTopics() {
   const [index, setIndex] = useState(0);
   const [animKey, setAnimKey] = useState(0);
-  const isFirst = useRef(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
