@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from "preact/hooks";
-import { topicSets, buffSequence, pinnedChats, tickerMessages, allChats, type Topic, type Buff, type PinnedChat } from "../data";
+import { useState, useEffect, useRef } from "preact/hooks";
+import { topicSets, buffSequence, pinnedChats, tickerMessages, allChats, type Buff, type PinnedChat } from "../data";
+import { playChime, playWhoosh, playAlert, playTick } from "../sounds";
 
 export function useMatchTimer() {
   const [minutes, setMinutes] = useState(67);
@@ -46,11 +47,13 @@ export function useViewerCount() {
 export function useTopics() {
   const [index, setIndex] = useState(0);
   const [animKey, setAnimKey] = useState(0);
+  const isFirst = useRef(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((i) => (i + 1) % topicSets.length);
       setAnimKey((k) => k + 1);
+      playChime();
     }, 20000);
     return () => clearInterval(interval);
   }, []);
@@ -62,10 +65,16 @@ export function useActiveBuff() {
   const [buffIndex, setBuffIndex] = useState(0);
   const [currentBuff, setCurrentBuff] = useState<Buff>({ ...buffSequence[0] });
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const alertedRef = useRef(false);
 
   useEffect(() => {
     const buff = buffSequence[buffIndex % buffSequence.length];
     setCurrentBuff({ ...buff });
+    alertedRef.current = false;
+
+    if (buffIndex > 0) {
+      playWhoosh();
+    }
 
     if (buff.state === "live" && buff.timeLeft) {
       let timeLeft = buff.timeLeft;
@@ -75,6 +84,10 @@ export function useActiveBuff() {
           if (timerRef.current) clearInterval(timerRef.current);
           setBuffIndex((i) => i + 1);
         } else {
+          if (timeLeft === 10 && !alertedRef.current) {
+            alertedRef.current = true;
+            playAlert();
+          }
           setCurrentBuff((b) => ({ ...b, timeLeft }));
         }
       }, 1000);
@@ -94,7 +107,7 @@ export function useActiveBuff() {
 }
 
 export function useLastResult() {
-  const [result, setResult] = useState({
+  const [result] = useState({
     winner: "Mbappé",
     winnerPct: 67,
     loser: "Bellingham",
@@ -114,6 +127,7 @@ export function usePinnedChats() {
     const interval = setInterval(() => {
       setStartIndex((i) => (i + 1) % pinnedChats.length);
       setAnimKey((k) => k + 1);
+      playChime();
     }, 30000);
     return () => clearInterval(interval);
   }, []);
@@ -132,6 +146,7 @@ export function useTickerMessage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((i) => (i + 1) % tickerMessages.length);
+      playTick();
     }, 8000);
     return () => clearInterval(interval);
   }, []);
