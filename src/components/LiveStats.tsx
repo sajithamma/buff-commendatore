@@ -22,7 +22,7 @@ export function LiveStats() {
         </div>
         <div class="stat-divider" />
         <div class="stat-item">
-          <span class="stat-value">4/12</span>
+          <span class="stat-value">4</span>
           <span class="stat-label-text">buffs sent</span>
         </div>
       </div>

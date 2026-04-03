@@ -9,6 +9,7 @@ import { LiveStats } from "./components/LiveStats";
 import { BottomBar } from "./components/BottomBar";
 import { AllChatsView } from "./components/AllChatsView";
 import { VoteProgressView } from "./components/VoteProgressView";
+import { AuroraBackground } from "./components/AuroraBackground";
 import "./style.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div class="app">
+      <AuroraBackground />
       <TopBar />
       <div class="main-content">
         {activeTab === "live" && (
